@@ -1,0 +1,60 @@
+﻿<Window x:Class="_1612751_EnglishLearning.MsgBoxYesNo"
+
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+
+        Title="MsgBoxYesNo" Height="200" Width="400"
+
+        WindowStyle="None" ResizeMode="NoResize"
+
+        WindowStartupLocation="CenterOwner"
+
+        AllowsTransparency="True" Background="Transparent" ShowInTaskbar="False" Loaded="Window_Loaded">
+
+	<Border BorderThickness="2" BorderBrush="#50CCCCCC" 
+
+    CornerRadius="20" Background="White">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="3*"></RowDefinition>
+				<RowDefinition Height="2*"></RowDefinition>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+
+			<Viewbox>
+				<TextBlock x:Name="txtMessage" Width="420" 
+
+                FontSize="22" TextWrapping="Wrap" 
+
+
+                TextAlignment="Center" Text="Quit the test will lost everything.\n Comfirm ?" Foreground="#FF585858" FontWeight="Bold"/>
+			</Viewbox>
+
+			<Viewbox Grid.Row="1">
+				<StackPanel Orientation="Horizontal" >
+					
+					<Button Content="Yes" x:Name="Yes" 
+							Foreground="#FFFF7155"
+                    Margin="20,5,10,5" HorizontalAlignment="Left" 
+
+                    VerticalAlignment="Top" Width="55" 
+
+                    Click="Yes_Click" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="10" FontWeight="Bold"/>
+					<Border CornerRadius="10"  Background="#FF89D4F7" Margin="10,5,20,5">
+						<Button Content="No" x:Name="No" 
+
+                    HorizontalAlignment="Left" 
+
+                    VerticalAlignment="Top" Width="55" 
+
+                    Click="No_Click" IsCancel="True" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontSize="10" FontWeight="Bold"/>
+					</Border>
+				</StackPanel>
+			</Viewbox>
+		</Grid>
+	</Border>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="_1612751_EnglishLearning.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1612751_EnglishLearning"
+        mc:Ignorable="d"
+		Loaded="Window_Loaded"
+        Title="Trắc nghiệm học tiếng anh" Height="350" Width="525" ResizeMode="NoResize">
+	<Window.Resources
+		>
+		<Style x:Key="DialogButtonStyle" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Grid>
+							<Ellipse Fill="{TemplateBinding Background}"
+                             Stroke="{TemplateBinding BorderBrush}"/>
+							<ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Window.Resources>
+	<StackPanel Name="StackRoot"
+		>
+		<Grid  Height="50">
+			<Label Name="actionText" Content="Chọn bộ câu hỏi" Foreground="#FFA1A1A1" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,0,0"/>
+
+		</Grid>
+		<Grid Name="Containner" >
+			<Grid Name="grid"/>
+			
+		</Grid>
+	</StackPanel>
+</Window>

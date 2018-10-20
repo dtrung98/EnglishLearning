@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="_1612751_EnglishLearning.QuestionItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:_1612751_EnglishLearning"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" 
+			>
+	<Border Name="event_border"
+			 CornerRadius="8,8,8,8" 
+			Margin="10"
+			
+			>
+	<Border Name="out_border" CornerRadius="8,8,8,8"  BorderThickness="0,0,0,0" Margin="10"  >
+		<Border Name="in_border" CornerRadius="8,8,8,8"   Margin="0,0,0,6" Padding="10,10,10,10" MouseMove="in_border_MouseMove" MouseLeave="in_border_MouseLeave"   >
+			<Grid >
+				<Image Name="plus_image" Visibility="Collapsed" Source="/Resources/plus.png" Width="35" Height="35"  />
+				<StackPanel Name="contentStackPanel"  >
+					<Label 
+						Name="Title"
+						Foreground="White"
+						   MinHeight="85"
+						   MaxHeight="85"
+						   FontSize="24" FontWeight="Bold"
+						   >
+						<Label.Content>
+							<AccessText  TextWrapping="Wrap" TextTrimming="CharacterEllipsis" Text=""/>
+						</Label.Content>
+					</Label>
+
+					<Label Name="MaxScore" Content="" Foreground="#CCFFFFFF" FontSize="14" VerticalAlignment="Bottom"
+						   />
+					<Label Name="QuestionNumber" Content="" Foreground="#CCFFFFFF" FontSize="10"/>
+
+				</StackPanel>
+			</Grid>
+		</Border>
+	</Border>
+	</Border>
+</UserControl>
